@@ -2,7 +2,7 @@ library(shiny)
 library(shinythemes)
 library(shinyvalidate)
 library(Group03lab05package)
-
+library(stringr)
 # Define FluidPage
 ui <- fluidPage(
   navbarPage(
