@@ -51,8 +51,10 @@ server <- function(input, output) {
     in_val$enable()
     
     coordinates <- get_country_coordinates(tolower(str_replace_all(input$country," ",".")))
-    print(coordinates)
-    req_stamen_map(coordinates[1],coordinates[2],coordinates[3],coordinates[4],input$zoom,input$maptype)
+
+    if(input$country!=""){
+      req_stamen_map(coordinates[1],coordinates[2],coordinates[3],coordinates[4],input$zoom,input$maptype)
+    }
     
   })
   
